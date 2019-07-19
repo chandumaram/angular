@@ -1,0 +1,96 @@
+<div>
+    <form [formGroup]="userForm" (ngSubmit)="onFormSubmit(userForm.value)">
+        <table class="table" *ngFor="let u of allUsers | async">
+            <div class="row">
+                <div class="first">
+                    <tr>
+                        <td>User Id</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput [readonly]="isReadonly" [(ngModel)]="u.UserId" formControlName="UserId">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput [readonly]="isReadonly" [(ngModel)]="u.FirstName" formControlName="FirstName">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput [readonly]="isReadonly" [(ngModel)]="u.LastName" formControlName="LastName">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput [readonly]="isReadonly" [(ngModel)]="u.DOB" formControlName="DOB">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput [readonly]="isReadonly" [(ngModel)]="u.Email" formControlName="Email">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </div>
+                <div class="second">
+                        <tr>
+                            <td>Village</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput [readonly]="isReadonly" [(ngModel)]="u.Village" formControlName="Village">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput [readonly]="isReadonly" [(ngModel)]="u.State" formControlName="State">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput [readonly]="isReadonly" [(ngModel)]="u.Country" formControlName="Country">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fb Id</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput [readonly]="isReadonly" [(ngModel)]="u.FbId" formControlName="FbId">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Twitter Id</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput [readonly]="isReadonly" [(ngModel)]="u.TwitterId" formControlName="TwitterId">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </div>
+                    <div class="third">
+                            <button mat-raised-button color="primary" [disabled]="isDisabled" (click)="onEdit()">Edit</button>
+                    </div>
+                              <button type="submit" mat-raised-button color="accent" [disabled]="isDis" >Submit</button> 
+            </div>
+        </table>
+    </form>
+</div>
