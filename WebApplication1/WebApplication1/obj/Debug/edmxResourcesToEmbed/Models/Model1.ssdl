@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="detailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PersonalDetails">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="30" />
+    <Property Name="LastName" Type="varchar" MaxLength="30" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="Village" Type="varchar" MaxLength="20" />
+    <Property Name="State" Type="varchar" MaxLength="15" />
+    <Property Name="Country" Type="varchar" MaxLength="20" />
+    <Property Name="FbId" Type="varchar" MaxLength="30" />
+    <Property Name="TwitterId" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="detailsModelStoreContainer">
+    <EntitySet Name="PersonalDetails" EntityType="Self.PersonalDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

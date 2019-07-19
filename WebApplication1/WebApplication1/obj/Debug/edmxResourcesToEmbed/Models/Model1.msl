@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="detailsModelStoreContainer" CdmEntityContainer="detailsEntities">
+    <EntitySetMapping Name="PersonalDetails">
+      <EntityTypeMapping TypeName="detailsModel.PersonalDetail">
+        <MappingFragment StoreEntitySet="PersonalDetails">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FbId" ColumnName="FbId" />
+          <ScalarProperty Name="TwitterId" ColumnName="TwitterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
